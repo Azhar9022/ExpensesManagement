@@ -4,8 +4,14 @@
 function redirectToAddExpense() {
   window.location.href = "http://localhost:8080/expense";
 }
+function redirectToAddEarning() {
+  window.location.href = "http://localhost:8080/earning";
+}
 function redirectToEarningDetails() {
-  window.location.href = "http://localhost:8080/earningDetails";
+  window.location.href = "http://localhost:8080/getEarningDetails";
+}
+function redirectToExpenseDetails() {
+  window.location.href = "http://localhost:8080/getExpenseDetails";
 }
 </script>
 </head>
@@ -34,7 +40,7 @@ Total Expenses
 <input type = "text" id="totExpenses" name = "totExpenses" value = ${totExpense} disabled>
 </td>
 <td>
-<input type="button" id="expenseDetails" name = "expenseDetails" value="Expense Details" />
+<input type="button" id="expenseDetails" name = "expenseDetails" value="Expense Details" onClick = "redirectToExpenseDetails()" />
 </td>
 </tr>
 
@@ -45,7 +51,7 @@ Total Expenses
 <input type="button" id="addExpense" name = "addExpense" value="Add Expense" onClick="redirectToAddExpense()" />
 </td>
 <td>
-<input type="button" id="addEarning" name = "addEarning"  value="Add Earning" />
+<input type="button" id="addEarning" name = "addEarning"  value="Add Earning" onClick="redirectToAddEarning()" />
 </td>
 </tr>
 
