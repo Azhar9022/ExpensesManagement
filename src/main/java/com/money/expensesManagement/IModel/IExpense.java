@@ -1,6 +1,6 @@
 package com.money.expensesManagement.IModel;
 
-import java.sql.Date;
+import java.util.Date;
 import java.time.LocalDate;
 
 public interface IExpense {

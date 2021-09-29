@@ -1,6 +1,8 @@
 package com.money.expensesManagement.modelImpl;
 
-import java.sql.Date;
+
+
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +12,7 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.money.expensesManagement.IModel.IExpense;
 
 @Entity
@@ -18,8 +21,8 @@ public class Expense implements IExpense{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
-	//@DateTimeFormat(pattern = "dd-MM-yyyy")
+	private int id;	 
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date expDate;
 	private String expItem;
 	private int expPayment;

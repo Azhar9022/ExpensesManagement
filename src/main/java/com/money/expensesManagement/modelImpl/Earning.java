@@ -1,13 +1,15 @@
 package com.money.expensesManagement.modelImpl;
 
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.money.expensesManagement.IModel.IEarning;
 
@@ -18,7 +20,7 @@ public class Earning implements IEarning{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int earnId;
-	//@DateTimeFormat(pattern = "dd-MM-yyyy")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date earnDate;
 	private String earnSource;
 	private int earnPayment;
